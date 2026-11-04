@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank you — Video Speed Controller</title>
+    <meta name="description" content="Your purchase is complete. All playback speeds unlock in Video Speed Controller." />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="../assets/icon-128.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Analytics: shared Umami site for kimdav178.github.io — filter reports by path /video-speed-welcome/thanks/. -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="f0e1c00b-eac9-42dd-a206-fee6c31581e7"></script>
+    <!-- No script of its own. The extension's content script runs here
+         (VSCConst.THANKS_URL), re-checks the purchase until the payment reaches
+         our server and sets <html data-vsc-purchase="checking|found|pending">;
+         style.css shows the matching paragraph. No attribute = the extension is
+         not installed in this browser. -->
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Video Speed Controller">
+        <img src="../assets/icon-128.png" alt="" width="32" height="32" />
+        <span>Video Speed Controller</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Thank you for your purchase</h1>
+        <div class="purchase-status" role="status" aria-live="polite">
+          <p class="lead purchase-state" data-state="none">Your payment went through. Open Video Speed Controller in the browser where you use it, choose <strong>Unlock all speeds</strong> and then <strong>Already paid? Check my purchase</strong>.</p>
+          <p class="lead purchase-state" data-state="checking"><span class="spinner" aria-hidden="true"></span>Unlocking all speeds — this usually takes a few seconds…</p>
+          <p class="lead purchase-state" data-state="found">All speeds are unlocked. Go back to your video and press <kbd class="kbd">D</kbd> to go past 2×, or set any step in the extension menu.</p>
+          <p class="lead purchase-state" data-state="pending">Your payment went through, but it hasn't reached us yet. It usually takes under a minute: then open the extension menu, choose <strong>Unlock all speeds</strong> and <strong>Already paid? Check my purchase</strong>.</p>
+        </div>
+        <p class="receipt">A receipt from Stripe is on its way to your email.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Questions about a payment? Use the <strong>Contact us</strong> link on the extension's upgrade page.
+    </footer>
+  </body>
+</html>
