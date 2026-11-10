@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="../style.css" />
     <!-- Analytics: shared Umami site for kimdav178.github.io — filter reports by path /video-speed-welcome/uninstall/. Replace data-website-id before deploy. -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="f0e1c00b-eac9-42dd-a206-fee6c31581e7"></script>
+    <!-- One anonymous "uninstall" count to our server: Chrome opens this page on removal.
+         1.6.1+ add ?v=&s=<stage>&a=<age bucket> to the address; older versions send none.
+         No install id. A reload within a day is not counted again (localStorage). -->
+    <script src="uninstall.js" defer></script>
   </head>
   <body>
     <header class="site-header">
